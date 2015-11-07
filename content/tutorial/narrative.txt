@@ -1,0 +1,6 @@
+Hello, and welcome to HackOS V2.76
+My job is to help you learn the ins and outs of this operating system.
+As you can see, I am not much to look at.
+But don't underestimate me, as I can do some pretty powerful stuff.
+Security is key here, so before we do anything else, you need to set a username and password.
+Please ensure that you remember your credentials, as you will need them every time that you log in.
