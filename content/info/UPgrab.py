@@ -17,7 +17,7 @@ def UPgrab2():
 	U = open('content/info/U.txt', 'w')
 	U.write(user)
 	U.close
-	P = open('content/info/P.txt', 'r')
+	P = open('content/info/P.txt', 'w')
 	P.read
 	P.write(passwd1)
 	P.close
@@ -25,10 +25,10 @@ def UPgrab2():
 def UPgrab():
 	U = open('content/info/U.txt', 'r')
 	U_contents = U.read(); U_contents = U_contents.strip('\n')
+	U.close()
 	if U_contents == "":
-		upgrab2()
+		UPgrab2()
 	else:
-		U.close()
 		print "It has been detected that existing login information already exists, would you like to proceed? [y/n]"
 		choice = raw_input('')
 		if choice == 'y':
