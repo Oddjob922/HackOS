@@ -7,12 +7,10 @@ def startup():
 	time.sleep(3)
 	print 'Initializing encryption algorithms... (1/3)'
 	time.sleep(3)
-	print '\nDone!'
-	time.sleep(3)
 	print 'Establishing secure connection to servers... (2/3)'
-	time.sleep(3)
-	print '\nDone!'
 	time.sleep(3)
 	print 'Finalizing... (3/3)'
 	time.sleep(3)
 	print '\nStartup complete'
+	time.sleep(.5)
+	os.system('cls' if os.name == 'nt' else 'clear')

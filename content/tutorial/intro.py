@@ -4,4 +4,5 @@ def tutorialP1():
 	print_txt('content/tutorial/narrative.txt')
 	
 def tutorialP2():
-	print "not designed yet"
+	print_txt('content/tutorial/dummy_attack.txt')
+	

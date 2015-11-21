@@ -12,12 +12,11 @@ def menu():
 	2) Continue Game'''
 	option = raw_input('\n>')
 	if option == '1':
-		startup()
-		tutorialP1()
 		UPgrab()
 		
 	elif option == '2':
 		startup()
+		tutorialP1()
 		login()
 	else:
 		print 'Not a valid option!'

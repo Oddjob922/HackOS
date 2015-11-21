@@ -1,4 +1,4 @@
-import getpass
+import getpass, os, time
 def login():
     usr_input = raw_input("Username: ")
     pw_input = getpass.getpass()
@@ -10,4 +10,5 @@ def login():
         return True
     else:
         print "Credentials are incorrect"
-        os.system('cls' if os.name == 'nt' else 'clear')
+        time.sleep(.3)
+        login()
