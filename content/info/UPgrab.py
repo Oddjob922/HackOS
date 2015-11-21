@@ -1,4 +1,4 @@
-import getpass
+import getpass, sys
 def UPgrab():
 	user = raw_input('Username: ')
 	p_match = False
@@ -10,8 +10,11 @@ def UPgrab():
 		else:
 			print 'Passwords did not match, try again'
 
-	file = open('..\\info\\UP.txt', 'a')
-	file.read
-	file.write('%s\n' % user)
-	file.write('%s' % passwd1)
-	file.close
+	U = open('content/info/U.txt', 'a')
+	U.read
+	U.write('%s' % user)
+	U.close
+	P = open('content/info/P.txt', 'a')
+	P.read
+	P.write('%s' % passwd1)
+	P.close

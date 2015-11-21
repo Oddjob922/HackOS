@@ -1,6 +1,7 @@
 import os, random, sys, time
 from content.effects.startup import startup
 from content.tutorial.intro import tutorialP1
+from content.info.UPgrab import UPgrab
 def menu():
 	os.system('cls' if os.name == 'nt' else 'clear')
 	print '''Welcome to my game, please pick an option:
@@ -11,7 +12,7 @@ def menu():
 	option = raw_input('\n>')
 	if option == '1':
 		#startup()
-		tutorialP1()
+		#tutorialP1()
 		UPgrab()
 		
 	elif option == '2':
