@@ -2,6 +2,7 @@ import os, random, sys, time
 from content.effects.startup import startup
 from content.tutorial.intro import tutorialP1
 from content.info.UPgrab import UPgrab
+from content.info.login import login
 def menu():
 	os.system('cls' if os.name == 'nt' else 'clear')
 	print '''Welcome to my game, please pick an option:
@@ -16,8 +17,7 @@ def menu():
 		UPgrab()
 		
 	elif option == '2':
-		print 'Not designed yet'
-		sys.exit(0)
+		login()
 	else:
 		print 'Not a valid option!'
 		menu()
