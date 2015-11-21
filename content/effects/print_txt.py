@@ -2,6 +2,7 @@ import os, time, sys
 def print_txt(path):
 	file = open(os.path.normpath(path), 'r')
 	for line in file:
+		os.system('cls' if os.name == 'nt' else 'clear')
 		line = line.strip('\n')
 		sys.stdout.write('\r%s' % line)
 		time.sleep(1)

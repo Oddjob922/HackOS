@@ -7,6 +7,7 @@ def login():
     username = creds_usr.read(); username = username.strip('\n')
     password = creds_pw.read(); password = password.strip('\n')
     if usr_input == username and pw_input == password:
-        print "yas"
+        return True
     else:
-        print "fuck outta here"
+        print "Credentials are incorrect"
+        os.system('cls' if os.name == 'nt' else 'clear')

@@ -1,5 +1,6 @@
 import getpass, sys
 def UPgrab():
+	os.system('cls' if os.name == 'nt' else 'clear')
 	user = raw_input('Username: ')
 	p_match = False
 	while p_match == False:
@@ -9,12 +10,13 @@ def UPgrab():
 			p_match = True
 		else:
 			print 'Passwords did not match, try again'
+			os.system('cls' if os.name == 'nt' else 'clear')
 
-	U = open('content/info/U.txt', 'a')
+	U = open('content/info/U.txt', 'w')
 	U.read
-	U.write('%s' % user)
+	U.write(user)
 	U.close
-	P = open('content/info/P.txt', 'a')
+	P = open('content/info/P.txt', 'w')
 	P.read
-	P.write('%s' % passwd1)
+	P.write(passwd1)
 	P.close
