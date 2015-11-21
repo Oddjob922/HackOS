@@ -15,4 +15,3 @@ def print_txt(path):
 		sys.stdout.write('\r')
 		os.system('cls' if os.name == 'nt' else 'clear')
 	file.close
-	os.system('cls' if os.name == 'nt' else 'clear')
