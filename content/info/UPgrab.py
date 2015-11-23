@@ -1,19 +1,28 @@
 import getpass, sys, time, os
 def UPgrab2():
 	os.system('cls' if os.name == 'nt' else 'clear')
-	print "Before the OS can be accessed, credentials must be set."
 	time.sleep(1.5)
 	os.system('cls' if os.name == 'nt' else 'clear')
-	user = raw_input('Username: ')
+	empty_input = True
+	while empty_input == True:
+		user = raw_input('Username: ')
+		if user == '' or user.isspace():
+			print 'Please set a valid username!'
+		else:
+			empty_input = False
+		
 	p_match = False
 	while p_match == False:
 		passwd1 = getpass.getpass()
 		passwd2 = getpass.getpass('Confirm Password: ')
-		if passwd1 == passwd2:
-			p_match = True
-		else:
-			print 'Passwords did not match, try again'
-			os.system('cls' if os.name == 'nt' else 'clear')
+		if passwd1.isspace() or passwd1 == '':
+			print 'Please set a valid password!'
+		else:	
+			if passwd1 == passwd2:
+				p_match = True
+			else:
+				print 'Passwords did not match, try again'
+				time.sleep(1)
 
 	U = open('content/info/U.txt', 'w')
 	U.write(user)

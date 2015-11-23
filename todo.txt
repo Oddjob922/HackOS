@@ -1,3 +1,1 @@
--Change 'connect' to 'ssh'
--fix print_txt, its broken right now for some reason (maybe the terminal?)
--Finish the terminal, keep it abstract
+-create list of known commands
