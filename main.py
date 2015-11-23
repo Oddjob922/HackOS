@@ -9,6 +9,7 @@ from content.other.verify_continue import verify_continue
 def parse(command):
 	error = True
 	while error == True:
+		pass
 		#if command is in the list of known commands:
 			#parse it
 		#otherwise
