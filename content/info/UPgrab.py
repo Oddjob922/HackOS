@@ -35,7 +35,7 @@ def UPgrab2():
 	save.close()
 	
 def UPgrab():
-	save = open('content/info/save.txt', 'rw+')
+	save = open('content/info/save.txt', 'r+')
 	save_contents = save.read(); save_contents = save_contents.strip('\n')
 	if save_contents == '':
 		UPgrab2()
@@ -53,7 +53,7 @@ def UPgrab():
 				save.close()
 				UPgrab2()
 			else:
-				sys.exit(0)
+				menu()
 		else:
-			sys.exit(0)
+			menu()
 	
