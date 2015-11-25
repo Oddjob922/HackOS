@@ -4,24 +4,31 @@ from content.tutorial.intro import tutorialP1
 from content.info.UPgrab import UPgrab
 from content.info.login import login
 from content.other.verify_continue import verify_continue
+from content.console.known_cmds import is_cmd_error
 
 
 def parse(command):
+	pass
+
+def determine_if_error(command):
 	error = True
 	while error == True:
-		pass
-		#if command is in the list of known commands:
-			#parse it
-		#otherwise
-			#throw an error
-		#LOOP
-
+		cmd_error = is_cmd_error(command)
+		if cmd_error == True:
+			return True
+		else:
+			return False
 
 def console():
 	session = 'active'
 	while session == 'active':
 		command = raw_input('\n>')
-		parse(command)
+		determine_if_error = determine_if_error(command)
+		if determine_if_error == True:
+			print "Not a recognized command. Enter 'help' for a list of useable commands."
+		elif determine_if_error == False:
+			parse(command)
+			
 	
 
 def menu():

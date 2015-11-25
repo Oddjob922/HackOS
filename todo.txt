@@ -1,1 +1,6 @@
--create list of known commands
+-continue list of known commands
+-Add parser for console
+
+
+LONG TERM:
+-Make console into class for better organization
