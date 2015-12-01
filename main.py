@@ -1,14 +1,16 @@
-import os, random, sys, time
+import os, sys, time
 from content.effects.startup import startup
-from content.tutorial.intro import tutorialP1
 from content.info.UPgrab import UPgrab
 from content.info.login import login
 from content.other.verify_continue import verify_continue
 from content.console.known_cmds import is_cmd_error
-
+from content.console.help import help
 
 def parse(command):
-	pass
+	if command == 'help' or command == '?':
+		help()
+	else:
+		pass
 
 def determine_if_error(command):
 	error = True
@@ -23,7 +25,7 @@ def console():
 	session = 'active'
 	while session == 'active':
 		command = raw_input('\n>')
-		determine_if_error = determine_if_error(command)
+		determine_if_error = is_cmd_error(command)
 		if determine_if_error == True:
 			print "Not a recognized command. Enter 'help' for a list of useable commands."
 		elif determine_if_error == False:
@@ -32,10 +34,9 @@ def console():
 	
 
 def menu():
-	print '''HackOS Boot sequence activated, please type 'new' to format drive and begin a new game or type 'continue' to restore your previous session :'''
+	print "HackOS Boot sequence activated. Useable commands: 'new', 'continue'"
 	option = raw_input('\n>')
 	if option == 'new':
-		tutorialP1()
 		UPgrab()
 		print "In order to make changes to the system, a restart is required"
 		time.sleep(1)
@@ -49,7 +50,7 @@ def menu():
 			login()
 			console()
 		else:
-			print "Error: No save file detected. Please start a new game"
+			print "Error: No save file detected."
 			time.sleep(1)
 			menu()
 	else:

@@ -1,7 +1,0 @@
-Okay, your username and password have been set.
-Now you need to learn some basic commands of this operating system.
-Before you can do anything to a target, you need to crack their password, and then ssh into their computer.
-Your current assignments can be found by typing "listip" without the quotes
-A dummy computer has been set up for you to attack.
-This computer has no password.
-Find its IP, and then ssh into it using "ssh <ip>" without the quotes.
