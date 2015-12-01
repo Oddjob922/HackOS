@@ -1,0 +1,6 @@
+telnet: Connect to a host. "telnet <ip address>"
+listip: List all current assignments.
+help: Show this help text
+?: Show this help text
+exit: Close the console and shutdown
+clear: Clear the screen

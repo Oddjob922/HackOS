@@ -7,10 +7,17 @@ from content.console.known_cmds import is_cmd_error
 from content.console.help import help
 
 def parse(command):
-	if command == 'help' or command == '?':
-		help()
-	else:
+	if command == 'telnet':
 		pass
+	elif command == 'listip':
+		pass
+	elif command == 'help' or command == '?':
+		help()
+	elif command == 'clear':
+		os.system('cls' if os.name == 'nt' else 'clear')
+	elif command == 'exit':
+		print "Terminal closed"
+		sys.exit(0)
 
 def determine_if_error(command):
 	error = True

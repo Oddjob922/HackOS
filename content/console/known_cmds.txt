@@ -1,5 +1,6 @@
-ssh
+telnet
 listip
 help
 ?
 exit
+clear

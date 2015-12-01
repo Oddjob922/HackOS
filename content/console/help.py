@@ -1,5 +1,5 @@
 def help():
-    file = open('content/console/known_cmds.txt', 'r')
+    file = open('content/console/cmd_help.txt', 'r')
     for line in file:
         print line
     file.close()
