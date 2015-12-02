@@ -1,4 +1,4 @@
-telnet: Connect to a host. "telnet <ip address>"
+telnet: Connect to a host.
 listip: List all current assignments.
 help: Show this help text
 ?: Show this help text
