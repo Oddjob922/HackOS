@@ -7,10 +7,11 @@ from content.console.known_cmds import is_cmd_error
 from content.console.help import help
 from content.other.ip_rand_gen import ip_rand_gen
 from content.console.listip import listip
+from content.console.telnet import telnet
 
 def parse(command):
 	if command == 'telnet':
-		pass
+		telnet()
 	elif command == 'listip':
 		listip()
 	elif command == 'ipgen':
