@@ -53,7 +53,9 @@ def UPgrab():
 				save.close()
 				UPgrab2()
 			else:
+				print 'Save data has NOT been overwritten, returning to menu...'
 				menu()
 		else:
+			print 'Save data has NOT been overwritten, returning to menu...'
 			menu()
 	

@@ -1,0 +1,11 @@
+raw_input('BE SURE YOU KNOW WHAT YOU ARE DOING, PRESS RETURN TO CONTINUE')
+u = open('content/info/U.txt', 'w')
+p = open('content/info/P.txt', 'w')
+save = open('content/info/save.txt', 'w')
+u.truncate(0)
+p.truncate(0)
+save.truncate(0)
+u.close()
+p.close()
+save.close()
+print "Done"

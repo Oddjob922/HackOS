@@ -1,16 +1,20 @@
-import os, sys, time
+import os, sys, time, random
 from content.effects.startup import startup
 from content.info.UPgrab import UPgrab
 from content.info.login import login
 from content.other.verify_continue import verify_continue
 from content.console.known_cmds import is_cmd_error
 from content.console.help import help
+from content.other.ip_rand_gen import ip_rand_gen
+from content.console.listip import listip
 
 def parse(command):
 	if command == 'telnet':
 		pass
 	elif command == 'listip':
-		pass
+		listip()
+	elif command == 'ipgen':
+		ip_rand_gen()
 	elif command == 'help' or command == '?':
 		help()
 	elif command == 'clear':
@@ -31,7 +35,7 @@ def determine_if_error(command):
 def console():
 	session = 'active'
 	while session == 'active':
-		command = raw_input('\n>')
+		command = raw_input('\n@')
 		determine_if_error = is_cmd_error(command)
 		if determine_if_error == True:
 			print "Not a recognized command. Enter 'help' for a list of useable commands."
@@ -53,7 +57,7 @@ def menu():
 	elif option == 'continue':
 		verify = verify_continue()
 		if verify == True:
-			startup()
+			#startup()
 			login()
 			console()
 		else:

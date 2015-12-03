@@ -1,5 +1,6 @@
 telnet: Connect to a host.
-listip: List all current assignments.
+listip: List all current assignments
+ipgen: Tool to find new IP addresses
 help: Show this help text
 ?: Show this help text
 exit: Close the console and shutdown
